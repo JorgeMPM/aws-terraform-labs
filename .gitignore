@@ -1,0 +1,34 @@
+# Basado en la plantilla oficial: https://github.com/github/gitignore/blob/main/Terraform.gitignore
+
+# Carpetas locales de Terraform (providers descargados)
+**/.terraform/*
+
+# Ficheros de estado: pueden contener secretos
+*.tfstate
+*.tfstate.*
+
+# Ficheros de bloqueo temporales del estado
+.terraform.tfstate.lock.info
+
+# Logs de fallos
+crash.log
+crash.*.log
+
+# Variables: suelen contener valores sensibles
+*.tfvars
+*.tfvars.json
+
+# Ficheros de override (configuración local)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Planes guardados con -out: pueden contener secretos
+*tfplan*
+
+# Configuración local de la CLI de Terraform
+.terraformrc
+terraform.rc
+
+# OJO: .terraform.lock.hcl NO se ignora. Va a Git.
