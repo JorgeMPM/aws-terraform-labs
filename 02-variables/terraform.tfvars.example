@@ -1,0 +1,9 @@
+# Copy this file to terraform.tfvars and set your own values.
+# terraform.tfvars is excluded from Git (.gitignore).
+
+# Required. S3 bucket names are globally unique.
+bucket_name = "your-unique-bucket-name"
+
+# Optional (these are the defaults).
+# aws_region   = "eu-west-1"
+# project_name = "aws-terraform-labs"

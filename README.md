@@ -11,6 +11,7 @@ Each lab creates real AWS resources, inspects them, and destroys them. Every lab
 | # | Lab | What it covers | Status |
 |---|---|---|---|
 | 01 | [S3 bucket](01-s3/) | Provider and version constraints, lock file, resources, `plan` / `apply` / `destroy`, Terraform state, S3 secure defaults (encryption, Block Public Access) | ✅ Done |
+| 02 | [Variables, outputs and locals](02-variables/) | Input variables, `terraform.tfvars` and precedence, outputs, locals for shared tags, `.tfvars.example` template | ✅ Done |
 
 More labs will be added as the project grows toward deploying a Spring Boot API on AWS (VPC, ECS Fargate, RDS, load balancer, CI/CD).
 
@@ -51,7 +52,7 @@ terraform apply
 terraform destroy              # always clean up
 ```
 
-> S3 bucket names are globally unique: change the `bucket` value in `01-s3/main.tf` before running `apply`.
+> S3 bucket names are globally unique: change the `bucket` value in `01-s3/main.tf` before running `apply`. From lab 02 on, copy `terraform.tfvars.example` to `terraform.tfvars` and set your own values instead.
 
 ---
 
@@ -59,6 +60,7 @@ terraform destroy              # always clean up
 
 - [Environment setup](docs/SETUP.md): Terraform, AWS CLI, `aws login`, budgets and troubleshooting.
 - [Lab 01: S3 bucket](docs/01-s3.md): code explained, commands, expected outputs and key concepts.
+- [Lab 02: variables, outputs and locals](docs/02-variables.md): parameterising the configuration, value precedence and reusable tags.
 
 ---
 
