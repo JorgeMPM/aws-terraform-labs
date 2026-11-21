@@ -14,6 +14,7 @@ Each lab creates real AWS resources, inspects them, and destroys them. Every lab
 | 02 | [Variables, outputs and locals](02-variables/) | Input variables, `terraform.tfvars` and precedence, outputs, locals for shared tags, `.tfvars.example` template | ✅ Done |
 | 03 | [VPC networking](03-vpc/) | VPC across two AZs, public and private subnets, Internet Gateway, route tables and associations, implicit dependencies, network outputs | ✅ Done |
 | 04 | [Security groups and RDS](04-rds/) | Security group referencing another security group, DB subnet group, encrypted RDS MySQL 8.4 in private subnets, master password managed in Secrets Manager (not in state) | ✅ Done |
+| 05 | [Docker image and ECR](05-ecr/) | Multi-stage Dockerfile, layer caching, private ECR repository with immutable tags and scan on push, pushing the API image, fixing a CRITICAL CVE found by the scan | ✅ Done |
 
 More labs will be added as the project grows toward deploying a Spring Boot API on AWS (VPC, ECS Fargate, RDS, load balancer, CI/CD).
 
@@ -65,6 +66,7 @@ terraform destroy              # always clean up
 - [Lab 02: variables, outputs and locals](docs/02-variables.md): parameterising the configuration, value precedence and reusable tags.
 - [Lab 03: VPC networking](docs/03-vpc.md): what makes a subnet public or private, route tables and network design for the API.
 - [Lab 04: security groups and RDS](docs/04-rds.md): least-privilege database access, stateful security groups, Secrets Manager and lab vs production settings.
+- [Lab 05: Docker image and ECR](docs/05-ecr.md): multi-stage builds, pushing to ECR and a real vulnerability workflow (detect, analyse, fix, verify, version).
 
 ---
 
